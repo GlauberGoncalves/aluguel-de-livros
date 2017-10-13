@@ -31,11 +31,6 @@ module.exports = function(application){
 		application.app.controllers.admin.excluirLivro(application, req, res);
 	});
 
-	/* chama controller alugar livro*/
-	application.get('/admin/alugar', function(req, res){
-		application.app.controllers.admin.alugar(application, req, res);
-	});
-
 	/* chama controller configuracoes */
 	application.get('/admin/configuracoes', function(req, res){
 		application.app.controllers.admin.configuracoes(application, req, res);
@@ -67,6 +62,7 @@ module.exports = function(application){
 		console.log('--> Rota excluir usuario chamado');
 		application.app.controllers.admin.exclui_usuario(application, req, res);
 	});
+
 
 
 };

@@ -117,15 +117,6 @@ module.exports.excluirLivro = function(application, req, res){
 
 };
 
-/*******************
-*
-* AlugarCtrl
-*
-********************/
-module.exports.alugar = function(application, req, res){
-	res.render("adm/alugar");
-};
-
 
 /*******************
 *

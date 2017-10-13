@@ -23,6 +23,12 @@ UsuariosDAO.prototype.excluiUsuario = function(id_usuario, callback){
 	this._connection.query('delete from usuarios where id_usuario = ' + id_usuario ,  callback);
 };
 
+UsuariosDAO.prototype.buscaEmail = function(email, callback){
+	console.log('--> Model buscaEmail chamado');
+	var sql = "select email from usuarios where email like '%" + email + "%' limit 5";
+	this._connection.query(sql ,  callback);
+};
+
 module.exports = function(){
 	return UsuariosDAO;
 };

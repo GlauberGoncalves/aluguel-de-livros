@@ -27,6 +27,12 @@ LivrosDAO.prototype.excluirLivro = function(id_livro, callback){
 	this._connection.query('delete from livros where id_livro = ' + id_livro ,  callback);
 };
 
+LivrosDAO.prototype.buscaLivro = function(livro, callback){
+	console.log('--> Model buscaLivro chamado');
+	var sql = "select titulo from livros where titulo like '%" + livro + "%' limit 5";
+	this._connection.query(sql ,  callback);
+};
+
 module.exports = function(){
 	return LivrosDAO;
 };
